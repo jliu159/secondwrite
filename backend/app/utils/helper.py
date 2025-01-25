@@ -125,7 +125,7 @@ def build_json(session):
 
             # Add applications related to this process
             for app in applications:
-                if app.id == process.application_id:
+                if app.id and process.application_id and app.id == process.application_id:
                     process_data.update({
                         "name": app.name,
                         "vendor": app.vendor,
@@ -134,7 +134,7 @@ def build_json(session):
                     })
                                 # Add applications related to this process
                 for pe_file in pe_files:
-                    if pe_file.id == app.pe_file_id:
+                    if pe_file.id and app.pe_file_id and pe_file.id == app.pe_file_id:
                         process_data.update({
                             "pe_name": pe_file.name,
                             "path": pe_file.path,
