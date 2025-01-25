@@ -35,6 +35,12 @@ npm install
 npm run dev
 ```
 
+## Pytest
+Two simple tests for each endpoint (upload and download) are tested to ensure 200 response codes.
+```
+pytest backend/app/tests/tests.py
+```
+
 ## Accessing the webpage
 Your app should now be running on `localhost:3000`
 
