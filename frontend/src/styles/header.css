@@ -1,0 +1,60 @@
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-header .progress-steps {
+    display: flex;
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .progress-header .step {
+    position: relative;
+    font-size: 16px;
+    color: #888;
+    padding-bottom: 12px; /* Space for the bar */
+  }
+  
+  .progress-header .step.active {
+    color: black;
+  }
+  
+  .progress-header .step.completed {
+    color: #4285F4;
+  }
+  
+  .progress-header .step::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: transparent; /* No bar by default */
+    transition: background-color 0.3s ease;
+  }
+  
+  .progress-header .step.active::after {
+    background-color: #000000; /* Blue bar for active step */
+  }
+  
+  /* Optional: Adding progress lines between steps */
+  .progress-header .progress-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #E0E0E0;
+    z-index: -1;
+  }
+  
+  .progress-header .step.completed + .progress-divider {
+    background-color: #4285F4; /* Highlight bar between completed steps */
+  }
+  
+  

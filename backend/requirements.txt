@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-dotenv
+protobuf
+sqlalchemy
+python-multipart
+pytest
+httpx
